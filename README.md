@@ -172,9 +172,9 @@ The mean average classification report, with an accuracy of approximately 70.5%,
 
 
 # Conclusion
-In conclusion, the steps involved in preparing and understanding our data, including preprocessing, conversion, feature engineering, and exploration, were crucial in unraveling complexities within specific features that showed potential outliers. This in-depth comprehension became the bedrock for developing a predictive model.
+In conclusion, the steps involved in preparing and understanding the data, including preprocessing, conversion, feature engineering, and exploration, were crucial in unraveling complexities within specific features that showed potential outliers. This in-depth comprehension became the bedrock for developing a predictive model.
 
-The choice of the Random Forest model was deliberate, leveraging its unique strengths in providing interpretability and highlighting feature importance. Its adaptability to scenarios requiring a clear understanding of individual variables' impact on predictions, capacity to handle various data types, and resilience to overfitting made it a robust selection for our diverse dataset. In cross-validation, it demonstrated a mean average accuracy of 70.5%, a precision of 0.203, and a recall of about 0.143, offering quantitative insights into the model's performance.
+The choice of the Random Forest model was deliberate, leveraging its unique strengths in providing interpretability and highlighting feature importance. Its adaptability to scenarios requiring a clear understanding of individual variables' impact on predictions, capacity to handle various data types, and resilience to overfitting made it a robust selection for diverse datasets. In cross-validation, it demonstrated a mean average accuracy of 70.5%, a precision of 0.203, and a recall of about 0.143, offering quantitative insights into the model's performance.
 
 Furthermore, a detailed analysis of feature importance not only pinpointed crucial features for prediction but also uncovered areas necessitating deeper investigation. The gained insights are pivotal for making informed decisions about which features require closer scrutiny and which ones might benefit from exclusion. This strategic approach aims to enhance the model's performance on both observed and unseen data, ensuring a strong and generalized predictive capability.
 
@@ -182,7 +182,6 @@ To sum up, the comprehensive strategy of thorough data exploration, model evalua
 
 
 # Recommendation
-
 
 **Feature Refinement:**
 - Delve deeper into refining features by closely examining those identified as crucial for accurate predictions.
