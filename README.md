@@ -126,39 +126,80 @@ Random Forest was selected because it not only effectively predicts customer boo
 ## Classification Report
 ![Classification Report](images/classification_report.PNG)
 
+- The classification results reveal a robust performance for the Negative Class (Class 0), showcasing a Precision of 85.90%, Recall approximately 98.52%, and an impressive F1-Score of 91.78%. This indicates the model's proficiency in correctly identifying instances of the Negative Class.
+
+- In contrast, the Positive Class (Class 1) exhibits lower performance metrics, with a Precision of 44.74%, Recall of 6.89%, and an F1-Score of 11.94%. These metrics suggest a relative weakness in the model's ability to accurately predict instances of the Positive Class, especially when compared to the robust performance on the Negative Class. This observation raises concerns about potential class imbalance or overfitting.
+
+- To address these concerns and evaluate the model's generalization capability, a cross-validation analysis is recommended. Cross-validation will provide insights into how the model performs on unseen data, helping to identify areas for improvement and enhance overall predictive accuracy.
+
 ## Classification Metrics by Class
 ![Classification Metrics Plot](images/classification_metrics_plot.png)
+*The plot visually represents the performance metrics for both Class 0 and Class 1, as discussed earlier.* *It serves as a graphical illustration of the precision, recall, and F1-score for each class, providing a comprehensive view of the model's performance across both classes.*
 
 ## Confusion Matrix
 ![Confusion Matrix](images/confusion_matrix.png)
 
-Consufion Matrix
+**Consufion Matrix**
 
-True Positive (TP):
+**True Positive (TP):**
+- 99 instances were correctly predicted as class 1.
 
-99 instances were correctly predicted as class 1.
-True Negative (TN):
+**True Negative (TN):**
+- 8394 instances were correctly predicted as class 0.
 
-8394 instances were correctly predicted as class 0.
-False Positive (FP):
+**False Positive (FP):**
+- 126 instances were incorrectly predicted as class 1.
 
-126 instances were incorrectly predicted as class 1.
-False Negative (FN):
-
-1381 instances were incorrectly predicted as class 0.
+**False Negative (FN):**
+- 1381 instances were incorrectly predicted as class 0.
 
 # Cross Validation 
 ## Snapsot of Cross Validation Results 
 ![Cross Validation DF](images/cross_validation_1.PNG)
+*The displayed dataframe illustrates the cross-validation results employing 5 folds.* *It offers a comprehensive view of the model's performance across these folds, showcasing different levels of accuracy, precision, and recall for each class.*
+
 
 ## Mean Average Results
 ![Cross Validation Mean Average](images/mean_results.PNG)
 
-
+The mean average classification report, with an accuracy of approximately 70.5%, a precision of about 20.3%, and a recall of around 14.3%, suggests that the model's performance on unseen data may be suboptimal. The relatively low precision and recall values indicate challenges in correctly identifying and classifying instances, which could be attributed to factors such as class imbalance or overfitting. Further investigation and fine-tuning may be necessary to enhance the model's generalization capabilities and improve its effectiveness on new, unseen data.
 
 # Feature Importances from RandomForest Model
 ![Feature Importance](images/feature_importance.png)
 
 
-- The most important variable in the model was purchase_lead, that is the time between purchase and departure.
-- The information regarding the flight, such as flight time and duration, proved to be significant. In contrast, most of the extracted continent information from the booking origin, fully represented by 'Continent_Europe,' 'Continent_South America,' 'Continent_Africa,' and 'Continent_None,' plays a minor role, exerting limited influence on the model's outcome.
+- The feature importance plot underscores that the variable "purchase_lead," signifying the duration between the purchase and departure dates, stands out as the most crucial factor influencing the model's predictive capability. Additionally, flight-related details, such as flight time and duration, prove to be significant contributors to the model's performance. In contrast, the extracted continent information from the booking origin, categorized as 'Continent_Europe,' 'Continent_South America,' 'Continent_Africa,' and 'Continent_None,' demonstrates a minor role and exerts limited influence on the model's outcome. This implies that these continent-related features have little importance in shaping the model's performance.
+
+
+# Conclusion
+In conclusion, the steps involved in preparing and understanding our data, including preprocessing, conversion, feature engineering, and exploration, were crucial in unraveling complexities within specific features that showed potential outliers. This in-depth comprehension became the bedrock for developing a predictive model.
+
+The choice of the Random Forest model was deliberate, leveraging its unique strengths in providing interpretability and highlighting feature importance. Its adaptability to scenarios requiring a clear understanding of individual variables' impact on predictions, capacity to handle various data types, and resilience to overfitting made it a robust selection for our diverse dataset. In cross-validation, it demonstrated a mean average accuracy of 70.5%, a precision of 0.203, and a recall of about 0.143, offering quantitative insights into the model's performance.
+
+Furthermore, a detailed analysis of feature importance not only pinpointed crucial features for prediction but also uncovered areas necessitating deeper investigation. The gained insights are pivotal for making informed decisions about which features require closer scrutiny and which ones might benefit from exclusion. This strategic approach aims to enhance the model's performance on both observed and unseen data, ensuring a strong and generalized predictive capability.
+
+To sum up, the comprehensive strategy of thorough data exploration, model evaluation metrics, and feature importance analysis guides ongoing refinement, fostering continual improvement in the predictive model's accuracy and effectiveness.
+
+
+# Recommendation
+
+
+**Feature Refinement:**
+- Delve deeper into refining features by closely examining those identified as crucial for accurate predictions.
+- Investigate and potentially eliminate features that exhibit limited importance, contributing minimally to the model's overall effectiveness.
+
+**Model Fine-Tuning:**
+- Explore the possibility of fine-tuning the Random Forest model parameters to unlock potential improvements in predictive performance.
+- Assess alternative algorithms to identify whether any offer superior performance tailored to this specific application.
+
+**Addressing Class Imbalance:**
+- In light of the noticeable performance gap between the two classes, explore strategies to rectify potential class imbalance.
+- Experiment with techniques such as oversampling, undersampling, or adjusting class weights during model training to achieve a more balanced representation.
+
+**Continuous Monitoring:**
+- Establish a robust system for ongoing monitoring and evaluation of the model's performance over time.
+- Regularly update the model based on emerging data patterns and evolving customer booking behavior to maintain relevance and accuracy.
+
+**Enhanced Data Collection:**
+- Consider expanding the dataset by incorporating additional relevant features that have the potential to contribute to enhanced predictions.
+- Assess the impact of integrating new data on the model's accuracy and its ability to generalize effectively to varying scenarios.
