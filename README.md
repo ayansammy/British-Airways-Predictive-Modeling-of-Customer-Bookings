@@ -142,7 +142,7 @@ Random Forest was selected because it not only effectively predicts customer boo
 **Consufion Matrix**
 
 **True Positive (TP):**
-- 99 instances were correctly predicted as class 1.
+- 102 instances were correctly predicted as class 1.
 
 **True Negative (TN):**
 - 8394 instances were correctly predicted as class 0.
@@ -151,7 +151,7 @@ Random Forest was selected because it not only effectively predicts customer boo
 - 126 instances were incorrectly predicted as class 1.
 
 **False Negative (FN):**
-- 1381 instances were incorrectly predicted as class 0.
+- 1378 instances were incorrectly predicted as class 0.
 
 # Cross Validation 
 ## Snapsot of Cross Validation Results 
